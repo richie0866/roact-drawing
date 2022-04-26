@@ -34,8 +34,10 @@ function write(url: string, data: string) {
 }
 
 function read(url: string) {
-	if (readfile) {
-		return readfile(encodeToFilename(url));
+	const path = encodeToFilename(url);
+
+	if (readfile && isfile) {
+		return isfile(path) ? readfile(path) : "";
 	} else {
 		return "";
 	}

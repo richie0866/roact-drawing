@@ -5,6 +5,7 @@
 declare const getgenv: (() => Record<string, any>) | undefined;
 declare const readfile: ((path: string) => string | undefined) | undefined;
 declare const writefile: ((path: string, content: string) => void) | undefined;
+declare const isfile: ((path: string) => boolean) | undefined;
 declare const isfolder: ((path: string) => boolean) | undefined;
 declare const makefolder: ((path: string) => void) | undefined;
 
